@@ -42,8 +42,6 @@ app.post("/campgrounds", function (req, res) {
             res.redirect("/campgrounds")
         }
     });
-
-    res.redirect("/campgrounds");
 });
 
 app.get("/campgrounds/new", function (req, res) {

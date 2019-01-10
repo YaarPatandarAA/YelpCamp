@@ -26,6 +26,10 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+app.use(function (req, res, next) {
+    res.locals.currentUser = req.user;
+    next();
+});
 
 const port = 3000;
 
@@ -151,8 +155,8 @@ app.get("/logout", function (req, res) {
     res.redirect("/campgrounds");
 });
 
-function isLoggedIn(req, res, next){
-    if(req.isAuthenticated()){
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) {
         return next();
     }
     res.redirect("/login");

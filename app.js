@@ -112,6 +112,13 @@ app.post("/campgrounds/:id/comments", function (req, res) {
     })
 });
 
+// =======================
+// AUTH ROUTES
+// show register form
+app.get("/register", function (req, res) {
+    res.render("register");
+});
+
 app.listen(port, function () {
     console.log("The YelpCamp Server has Started!");
 });

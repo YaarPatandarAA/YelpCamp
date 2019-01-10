@@ -73,7 +73,6 @@ app.get("/campgrounds/:id/comments/new", function (req, res) {
             res.render("comments/new", {campground: campground});
         }
     });
-    res.render("comments/new");
 });
 
 app.listen(port, function () {

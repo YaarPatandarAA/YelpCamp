@@ -33,7 +33,6 @@ router.post("/", middleware.isLoggedIn, function (req, res) {
             console.log(err);
         } else {
             //redirect back to campgrounds page
-            console.log(newlyCreated);
             res.redirect("/campgrounds");
         }
     });
@@ -52,7 +51,6 @@ router.get("/:id", function (req, res) {
             req.flash("error", "Campground not found");
             res.redirect("back");
         } else {
-            console.log(foundCampground)
             //render show template with that campground
             res.render("campgrounds/show", { campground: foundCampground });
         }

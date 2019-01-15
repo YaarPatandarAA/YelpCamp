@@ -1,7 +1,16 @@
 # YelpCamp
 Add and comment on your favorite campgrounds. Share your favorite campgrounds with the community.
 
-### Finished - [Visit live site](https://yelpcampamarjitsingh.herokuapp.com)
+## How to Use - Installation
+* Clone this repo.
+* Install [MongoDB](https://www.mongodb.com)
+* Install [Node.js](https://nodejs.org/en/)
+* Go to source directory, where you cloned.
+   * Run ```npm install``` in terminal
+   * Run ```mongod``` in terminal
+   * Run ```node app.js``` in new terminal
+
+## Finished - [Visit live site](https://yelpcampamarjitsingh.herokuapp.com)
 #### Landing Page
 ![](/finishedPage/1.gif)
 #### Main Page
